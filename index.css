@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', sans-serif;
+  background-color: #4f6fd5;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+/* ── Station header gradient ─────────────────────────────────
+   These two colors show up as the left → right gradient.
+   Sample them from your county seal on imagecolorpicker.com  */
+.station-header {
+  background: linear-gradient(
+    135deg,
+    #a8d6ef 0%,    /* ← YOUR COUNTY COLOR (left side)  */
+    #3b94c8 100%   /* ← YOUR COUNTY COLOR (right side) */
+  );
+  padding: 2rem;
+  text-align: center;
+}
+
+.station-header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+.station-header p  { font-size: 1.1rem; opacity: 0.9; }
+
+/* ── Song cards ──────────────────────────────────────────── */
+.song-card {
+  background-color: #607fd4;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: background-color 0.2s;
+}
+
+.song-card:hover { background-color: #1a2744; }
+
+.song-info  { flex: 1; }
+.song-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.song-artist { font-size: 0.9rem; color: #aaa; }
+
+/* ── Like / icon button ──────────────────────────────────── */
+.icon-button {
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: color 0.2s, background-color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.icon-button:hover { background-color: rgba(255, 255, 255, 0.1); }
+.icon-button.liked  { color: #e74c3c; }
+
+/* ── Playlist container ──────────────────────────────────── */
+.playlist {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.playlist h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+
+/* ── Now Playing panel ───────────────────────────────────── */
+.now-playing {
+  background: linear-gradient(135deg, #0f3460, #533483);
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.now-playing h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+.now-playing .song-title  { font-size: 1.5rem; }
+.now-playing .song-artist { font-size: 1.1rem; color: #bbb; }
+
+/* ── Play / Pause button ─────────────────────────────────── */
+.play-button {
+  margin-top: 1rem;
+  background: #667eea;
+  border: none;
+  color: white;
+  font-size: 1.25rem;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.play-button:hover { background: #764ba2; }
+
+/* ── Station stats bar ───────────────────────────────────── */
+.station-stats {
+  text-align: center;
+  padding: 0.75rem;
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+.live {
+  color: white;
+  font-size: 1.5rem;
+  background-color: red;
+}
+
